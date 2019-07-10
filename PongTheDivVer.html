@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pong The Div Edition</title>
+        <style>
+            #backBoard {
+                border: 1px solid black;
+                height: 200px;
+                position: relative;
+                width: 400px;
+            }
+            #playerOnePaddle {
+                background: black;
+                border: 1px solid black;
+                height: 50px;
+                position: absolute;
+                top: 0;
+                left: 4px;
+                width: 4px;
+            }
+            #playerTwoPaddle {
+                background: red;
+                border: 1px solid red;
+                height: 50px;
+                position: absolute;
+                top: 0;
+                left: 390px;
+                width: 4px;
+            }
+
+            #ball {
+                background-color: green;
+                border: 1px solid black;
+                border-radius: 50%;
+                height: 15px;
+                position: absolute;
+                top: 0;
+                left: 50px;
+                width: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="backBoard">
+            <div id="playerOnePaddle"></div>
+            <div id="playerTwoPaddle"></div>
+            <div id="ball"></div>
+        </div>
+
+
+        <script>
+            var playerOne = document.getElementById("playerOnePaddle");
+            var playerTwo = document.getElementById("playerTwoPaddle");
+            //console.log(playerOne);
+            //console.log(playerTwo);
+
+           
+            window.addEventListener('keydown', function (e) {
+            //var left= parseInt(getComputedStyle(playerOne).left);
+            var y = parseInt(getComputedStyle(playerOne).top);
+           
+            e.preventDefault();
+           
+                if(e.key === "ArrowUp") {
+                    y -= 5;
+                    playerOne.style.top = y + "px";
+                    console.log(e);
+                } 
+                else if(e.key === "ArrowDown") {
+                    y += 5;
+                    playerOne.style.top = y + "px";
+                    console.log(e);
+                }
+               
+            });
+
+            window.addEventListener('keydown', function (e){
+                var x = parseInt(getComputedStyle(playerTwo).top);
+                e.preventDefault();
+                if(e.key === 'w') { // arrow up 
+                    x -= 5;
+                    playerTwo.style.top = x + "px";
+                    console.log(e);
+                } 
+                else if(e.key === 's') {  //arrow down
+                    x = x + 5;
+                    playerTwo.style.top = x + "px";
+                    console.log(e);
+                }
+            });
+
+            
+           
+
+           
+           
+        </script>
+    </body>
+</html>
