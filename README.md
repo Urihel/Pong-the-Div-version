@@ -1,1 +1,2 @@
 # Pong-the-Div-version
+Is Pong but created in html using only div elements and id attributes. While in programming most build pong on canvas. I chose to use divs to see if the game would work and so far things seem to be working just fine. the javascript currently has access to the css and we use some code to change the top and bottom pixels of the positoin of the paddle so when you hit the keyup or down. 
