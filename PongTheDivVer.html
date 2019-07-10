@@ -56,7 +56,7 @@
             //console.log(playerTwo);
 
            
-            window.addEventListener('keydown', function (e) {
+            playerOne.addEventListener('keydown', function (e) {
             //var left= parseInt(getComputedStyle(playerOne).left);
             var y = parseInt(getComputedStyle(playerOne).top);
            
@@ -75,7 +75,7 @@
                
             });
 
-            window.addEventListener('keydown', function (e){
+            playerTwo.addEventListener('keydown', function (e){
                 var x = parseInt(getComputedStyle(playerTwo).top);
                 e.preventDefault();
                 if(e.key === 'w') { // arrow up 
